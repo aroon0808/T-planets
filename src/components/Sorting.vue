@@ -8,43 +8,42 @@
 </template>
 
 <script setup>
-import IconSorting from "@/assets/icons/IconSorting.vue";
-import IconSortingDesc from "@/assets/icons/IconSortingDesc.vue";
-import IconSortingAsc from "@/assets/icons/IconSortingAsc.vue";
+import IconSorting from '@/assets/icons/IconSorting.vue'
+import IconSortingDesc from '@/assets/icons/IconSortingDesc.vue'
+import IconSortingAsc from '@/assets/icons/IconSortingAsc.vue'
 
-import { defineProps } from "vue";
+import { defineProps } from 'vue'
 
-import { underScoreFormatter } from "@/utils/underScoreFormatter.js"
+import { underScoreFormatter } from '@/utils/underScoreFormatter.js'
 
 const emit = defineEmits(['sorting'])
 
 defineProps({
   header: {
     type: String,
-    default: '',
+    default: ''
   },
   direction: {
     type: String,
-    default: '',
-  },
-});
+    default: ''
+  }
+})
 
 const sorting = (header) => {
-  emit('sorting', header);
-};
-
+  emit('sorting', header)
+}
 </script>
 
 <style scoped>
-  .sort-button {
-    text-transform: capitalize;
-    display: flex;
-    cursor: pointer;
-    align-items: center;
-    gap: 5px;
-    font-size: .9rem;
-    background: transparent;
-    border: none;
-    color: #fff;
-  }
+.sort-button {
+  text-transform: capitalize;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9rem;
+  background: transparent;
+  border: none;
+  color: #fff;
+}
 </style>

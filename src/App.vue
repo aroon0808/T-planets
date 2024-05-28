@@ -1,5 +1,5 @@
 <script setup>
-  import Planets from '@/components/Planets.vue'
+import Planets from '@/components/Planets.vue'
 </script>
 
 <template>
