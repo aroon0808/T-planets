@@ -1,19 +1,14 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+<script setup>
+  import Planets from '@/components/Planets.vue'
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
+    <img alt="T-Planets logo" class="logo" src="./assets/logo.svg" width="60" height="60" />
   </header>
 
   <main>
-    <TheWelcome />
+    <Planets />
   </main>
 </template>
 
@@ -27,7 +22,7 @@ header {
   margin: 0 auto 2rem;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   header {
     display: flex;
     place-items: center;
@@ -35,13 +30,7 @@ header {
   }
 
   .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
+    margin: 0 1rem;
   }
 }
 </style>
