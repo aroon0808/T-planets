@@ -1,16 +1,19 @@
 <template>
   <div class="pagination-wrapper">
-    <button class="previous" :disabled="!status.previous" @click="changePagination('previous')"><ChevronLeft/></button>
-    <button class="next" :disabled="!status.next" @click="changePagination ('next')"><ChevronRight/></button>
+    <button class="previous" :disabled="!status.previous" @click="changePagination('previous')">
+      <ChevronLeft />
+    </button>
+    <button class="next" :disabled="!status.next" @click="changePagination('next')">
+      <ChevronRight />
+    </button>
   </div>
 </template>
 
-
 <script setup>
-import ChevronLeft from "@/assets/icons/IconChevronLeft.vue";
-import ChevronRight from "@/assets/icons/IconChevronRight.vue";
+import ChevronLeft from '@/assets/icons/IconChevronLeft.vue'
+import ChevronRight from '@/assets/icons/IconChevronRight.vue'
 
-import { defineProps } from "vue";
+import { defineProps } from 'vue'
 
 const emit = defineEmits(['pagination'])
 
@@ -18,8 +21,8 @@ defineProps({
   status: {
     type: Object,
     default: null
-  },
-});
+  }
+})
 
 const changePagination = (e) => {
   emit('pagination', e)
@@ -54,6 +57,4 @@ const changePagination = (e) => {
 svg {
   height: 100%;
 }
-
 </style>
-

@@ -1,3 +1,3 @@
 export const underScoreFormatter = (string) => {
-    return string.replaceAll('_', ' ')
+  return string.replaceAll('_', ' ')
 }
